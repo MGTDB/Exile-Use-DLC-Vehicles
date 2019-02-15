@@ -17,7 +17,7 @@ class CfgInteractionMenus
 			class GetInDLCDriver: ExileAbstractAction
 			{
 				title = "['Driver'] call ExileClient_object_vehicle_getInteractionName";
-				condition = "['Driver'] call ExileClient_object_vehicle_checkForDLCAndSeat";
+				condition = "((locked ExileClientInteractionObject) isEqualTo 0) && ['Driver'] call ExileClient_object_vehicle_checkForDLCAndSeat";
 				action = "['Driver'] call ExileClient_object_vehicle_moveInSeat";
 				priority = 6;
 			};
@@ -26,7 +26,7 @@ class CfgInteractionMenus
 			class GetInDLCGunner: ExileAbstractAction
 			{
 				title = "['Gunner'] call ExileClient_object_vehicle_getInteractionName";
-				condition = "['Gunner'] call ExileClient_object_vehicle_checkForDLCAndSeat";
+				condition = "((locked ExileClientInteractionObject) isEqualTo 0) && ['Gunner'] call ExileClient_object_vehicle_checkForDLCAndSeat";
 				action = "['Gunner'] call ExileClient_object_vehicle_moveInSeat";
 				priority = 6;
 			};
@@ -35,7 +35,7 @@ class CfgInteractionMenus
 			class GetInDLCCommander: ExileAbstractAction
 			{
 				title = "['Commander'] call ExileClient_object_vehicle_getInteractionName";
-				condition = "['Commander'] call ExileClient_object_vehicle_checkForDLCAndSeat";
+				condition = "((locked ExileClientInteractionObject) isEqualTo 0) && ['Commander'] call ExileClient_object_vehicle_checkForDLCAndSeat";
 				action = "['Commander'] call ExileClient_object_vehicle_moveInSeat";
 				priority = 6;
 			};
